@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tests.scott.actionbartests2" >
+
+    <!-- View players, should appear as action button -->
+    <item
+        android:id="@+id/action_view_players"
+        android:icon="@drawable/ic_action_person"
+        android:showAsAction="ifRoom"
+        android:title="@string/action_view_players"/>
+
+    <!-- Settings, should appear as action button -->
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/ic_action_settings"
+        android:showAsAction="ifRoom"
+        android:title="@string/action_settings"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SettingsPage"
+            android:label="@string/action_settings"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ViewPlayersPage"
+            android:label="@string/action_view_players"
+            android:screenOrientation="portrait" >
+        </activity>
+    </application>
+
+</manifest>
